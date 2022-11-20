@@ -1,4 +1,4 @@
-name: project cicd flow
+name: project flake8 cicd flow
 
 on:
   push:
@@ -26,6 +26,7 @@ jobs:
           pip install flake8
       - name: Lint with flake8
         run: |
+          flake8 --max-line=250 $(git ls-files '*.py')
           # dừng quá trình build nếu có lỗi cú pháp Python hoặc tên không xác định
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           # exit-zero coi tất cả các lỗi là cảnh báo. Trình chỉnh sửa GitHub rộng 250 ký tự
