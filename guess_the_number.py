@@ -3,6 +3,7 @@ Function to guess the number from user
 """
 import random
 NUMBER = random.randint(1, 10)
+test=10
 
 PLAYER_NAME = input("Hello, what is your name? ")
 NUMBER_OF_GUESSES = 0
